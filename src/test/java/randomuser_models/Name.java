@@ -3,7 +3,9 @@ package randomuser_models;
 
 import java.util.HashMap;
 import java.util.Map;
+import lombok.Data;
 
+@Data
 public class Name {
 
   private String title;

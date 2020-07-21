@@ -4,17 +4,16 @@ import io.cucumber.java.Before;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 
-public class TestConfig {
-    public static RequestSpecification videoGame_requestSpec;
+public class TestConfigRandomUser {
+    public static RequestSpecification randoUser_requestSpec;
 
     @Before
     public static void beforeScenario() {
         System.out.println("before");
 
-        videoGame_requestSpec = new RequestSpecBuilder().
-                setBaseUri("http://localhost").
+        randoUser_requestSpec = new RequestSpecBuilder().
+                setBaseUri("https://randomuser.me").
                 setPort(8080).
-                setBasePath("/app/").
                 addHeader("Content-Type", "application/json").
                 addHeader("Accept", "application/json").
                 build();
